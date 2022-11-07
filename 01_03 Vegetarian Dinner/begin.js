@@ -4,15 +4,14 @@
 
 function VegetarianMenu(menu) {
   const MenuNode = document.querySelector("#menu");
-  const VegetarianMenu = menu.filter((option) => option.isVegetarian === true)
-  console.log(VegetarianMenu);
-  VegetarianMenu.forEach((option) => {
+  const VegieMenu = menu.filter((option) => option.isVegetarian === true);
+  
+  VegieMenu.forEach((option) => {
     let dish = document.createElement("li");
-    dish.textContent = option.name;
+    dish.textContent = option.name
     MenuNode.appendChild(dish);
   })
 }
-
 VegetarianMenu([
   {
     name: "Chicken parmesan",
@@ -34,6 +33,6 @@ VegetarianMenu([
     name: "Filet mignon",
     isVegetarian: false,
   },
-])
+]);
 
 
