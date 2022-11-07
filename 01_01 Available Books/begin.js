@@ -5,7 +5,7 @@
   restock(numCopies)
 */
 
-class Books {
+class Book {
   constructor(title, author, ISBN, numCopies) {
     this.title = title;
     this.author = author;
@@ -25,5 +25,14 @@ class Books {
     }
     return "In stock";
   }
+  sell(numCopiesSold = 1) {
+    this.numCopies -= numCopiesSold;
+  }
+  restock(numCopiesStocked = 5) {
+    this.numCopies += numCopiesStocked;
+  }
 
 }
+
+const JamesBook = new Book("JavaScript Master", "James Anh", 6546456, 100)
+console.log(JamesBook.availability)
