@@ -1,7 +1,19 @@
 /*
   WRITE YOUR SOLUTION HERE
 */
-const menu = [
+
+function VegetarianMenu(menu) {
+  const MenuNode = document.querySelector("#menu");
+  const VegetarianMenu = menu.filter((option) => option.isVegetarian === true)
+  console.log(VegetarianMenu);
+  VegetarianMenu.forEach((option) => {
+    let dish = document.createElement("li");
+    dish.textContent = option.name;
+    MenuNode.appendChild(dish);
+  })
+}
+
+VegetarianMenu([
   {
     name: "Chicken parmesan",
     isVegetarian: false,
@@ -22,8 +34,6 @@ const menu = [
     name: "Filet mignon",
     isVegetarian: false,
   },
-];
+])
 
-const vegetearian = menu.filter(veg => veg.isVegetarian === true)
 
-console.log(vegetearian);
