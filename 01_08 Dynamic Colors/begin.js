@@ -4,6 +4,9 @@
 // closure is the combination of a function bundled together with regerences to its surrounding state(lexical enviorment
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 
+
+
+
 function switchColor(color) {
   return function () {
     document.body.style.backgroundColor = color
